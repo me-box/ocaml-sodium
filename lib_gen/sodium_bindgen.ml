@@ -19,7 +19,7 @@ module Bind(F: Cstubs.FOREIGN) = struct
 
   module Auth = Gen_auth(struct
     let scope     = "auth"
-    let primitive = "hmacsha512256"
+    let primitive = "hmacsha256"
   end)
   module Auth' = BindStorage(Auth.Make)
 
